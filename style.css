@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f7f7f7;
+    font-family: 'Courier New', Courier, monospace; /* Fonte clássica de jogo */
+    overflow: hidden;
+}
+
+#game-central {
+    position: relative;
+    width: 800px;
+    height: 250px;
+    border-bottom: 2px solid #535353;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+canvas {
+    display: block;
+}
+
+#score-container {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    display: flex;
+    gap: 15px;
+    color: #535353;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#high-score {
+    color: #999; /* Cor apagada para o High Score */
+}
+
+#game-over-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #535353;
+    z-index: 10;
+}
+
+#game-over-screen.hidden {
+    display: none;
+}
+

@@ -2,15 +2,32 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Jogo do Dinossauro</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dino Chrome Procedural</title>
+    <style>
+        /* Adicionamos o CSS básico aqui para o Canvas aparecer */
+        body { margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh; background: #f7f7f7; }
+        #game-central { position: relative; }
+        #gameCanvas { border-bottom: 2px solid #535353; }
+        #score-container { position: absolute; top: 10px; right: 20px; font-family: monospace; font-size: 20px; color: #535353; }
+        .hidden { display: none; }
+        #game-over-screen { position: absolute; top: 50px; left: 200px; text-align: center; }
+    </style>
 </head>
 <body>
-    <div id="game-container">
-        <div id="dino"></div>
-        <div id="cactus"></div>
+
+    <div id="game-central">
+        <canvas id="gameCanvas" width="800" height="250"></canvas>
+        <div id="score-container">
+            <span id="high-score">HI 00000</span>
+            <span id="current-score">00000</span>
+        </div>
+        <div id="game-over-screen" class="hidden">
+            <h1>GAME OVER</h1>
+            <p>Pressione Espaço para Reiniciar</p>
+        </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
-

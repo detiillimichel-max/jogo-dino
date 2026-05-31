@@ -1,0 +1,12 @@
+<canvas id="c" width="512" height="512"></canvas>
+<script>
+    const c = document.getElementById("c");
+    const ctx = c.getContext("2d");
+    ctx.fillStyle = "#f7f7f7"; ctx.fillRect(0,0,512,512); // Fundo
+    ctx.fillStyle = "#535353";
+    // Dinossauro maior e mais detalhado
+    ctx.fillRect(150, 150, 150, 150); 
+    ctx.fillRect(300, 200, 60, 100);
+    ctx.fillStyle = "#f7f7f7";
+    ctx.fillRect(230, 180, 30, 30); // Olho
+</script>
